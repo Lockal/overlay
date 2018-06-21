@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: #263245;
+}
+
+@font-face {
+    font-family: Bebas Neue Cyrillic;
+    src: url(fonts/Bebas_Neue_Cyrillic.ttf);
+    src: url(fonts/bebas_neue_cyrillic-webfont.woff);
+}
+
+@font-face {
+    font-family: Bebas Neue Regular;
+    src: url(fonts/bebasneue_regular-webfont.woff);
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    background: #3171f2;
+}
+
+.overlay__block {
+    box-sizing: border-box;
+    width: 273px;
+    height: 119px;
+    background-color: rgba( 255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-top: 36px;
+    margin-left: 36px;
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+.overlay__title {
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    font-size: 48px;
+    max-width: 531px;
+    color: white;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.overlay__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 64px;
+    margin-bottom: 26px;
+}
+
+.overlay__block-city {
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    font-size: 32px;
+    color: white;
+}
+
+.overlay__block-date {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #263245;
+    margin-top: 1px;
+}
+
+.overlay__block-choose {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #3171f2;
+    margin-top: 20px;
+    position: relative;
+    display: none;
+}
+
+.overlay__block-choose:hover {
+    cursor: pointer;
+}
+
+.overlay__block-choose::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 10px;
+    background: url("img/choose-arrow.png") no-repeat center;
+    right: 188px;
+    top: 3px;
+}
+
+.overlay__close {
+    width: 48px;
+    height: 48px;
+    background: url(img/close-overlay.png) no-repeat center, #f3f5fa;
+    border-radius: 50%;
+    position: absolute;
+    right: 100px;
+    top: 64px;
+}
+
+.overlay__close:hover {
+    cursor: pointer;
+}
+
+.overlay__block:hover {
+    background: white;
+}
+
+.overlay__block:hover .overlay__block-choose {
+    display: flex;
+}
+
+.overlay__block:hover .overlay__block-city {
+    color: #3171f2;
+}
